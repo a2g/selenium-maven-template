@@ -80,10 +80,20 @@
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>${log4j-api.version}</version>
-            <scope>test</scope>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j-api.version}</version>
+			<scope>test</scope>
         </dependency>
+        <dependency>
+ 			 <groupId>org.slf4j</groupId>
+  			<artifactId>slf4j-api</artifactId>
+ 			 <version>1.7.25</version>
+		</dependency>   
+		<dependency>
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>slf4j-log4j12</artifactId>
+		  <version>1.7.25</version>
+		</dependency> 
         <!--To enable log colours on windows machines-->
         <dependency>
             <groupId>org.fusesource.jansi</groupId>
@@ -135,6 +145,41 @@
                 <version>${maven-compiler-plugin.version}</version>
             </plugin>
         </plugins>
+        <pluginManagement>
+        	<plugins>
+        		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+        		<plugin>
+        			<groupId>org.eclipse.m2e</groupId>
+        			<artifactId>lifecycle-mapping</artifactId>
+        			<version>1.0.0</version>
+        			<configuration>
+        				<lifecycleMappingMetadata>
+        					<pluginExecutions>
+        						<pluginExecution>
+        							<pluginExecutionFilter>
+        								<groupId>
+        									com.lazerycode.selenium
+        								</groupId>
+        								<artifactId>
+        									driver-binary-downloader-maven-plugin
+        								</artifactId>
+        								<versionRange>
+        									[1.0.18,)
+        								</versionRange>
+        								<goals>
+        									<goal>selenium</goal>
+        								</goals>
+        							</pluginExecutionFilter>
+        							<action>
+        								<ignore></ignore>
+        							</action>
+        						</pluginExecution>
+        					</pluginExecutions>
+        				</lifecycleMappingMetadata>
+        			</configuration>
+        		</plugin>
+        	</plugins>
+        </pluginManagement>
     </build>
 
     <profiles>
