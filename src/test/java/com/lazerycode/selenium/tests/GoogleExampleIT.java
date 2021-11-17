@@ -26,7 +26,7 @@ public class GoogleExampleIT extends DriverBase {
         GoogleHomePage googleHomePage = new GoogleHomePage();
 
         // First we agree to Google's cookie usage terms
-        googleHomePage.acceptCookies();
+        //googleHomePage.acceptCookies(); // I've already accepted this for all. this must expect clean machine.
 
         // Then we perform a google search for Cheese
         GoogleSearchPage googleSearchPage = googleHomePage.enterSearchTerm("Cheese").submitSearch();
@@ -54,7 +54,7 @@ public class GoogleExampleIT extends DriverBase {
         GoogleHomePage googleHomePage = new GoogleHomePage();
 
         // First we agree to Google's cookie usage terms
-        googleHomePage.acceptCookies();
+        //googleHomePage.acceptCookies(); // I've already accepted this for all. this must expect clean machine.
 
         // Then we perform a google search for Cheese
         GoogleSearchPage googleSearchPage = googleHomePage.enterSearchTerm("Milk").submitSearch();
