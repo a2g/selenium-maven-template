@@ -50,3 +50,4 @@ target
 ####################
 **/selenium_standalone_zips/
 **/selenium_standalone_binaries/
+.DS_Store
